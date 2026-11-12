@@ -1,0 +1,22 @@
+[plugin]
+id = "dev.haunt.focus-block"
+name = "Focus block"
+description = "A focus timer that holds agent pings until the block ends"
+version = "0.1.0"
+api = "0.5"
+entry = "target/wasm32-wasip2/release/haunt_plugin.wasm"
+license = "MIT"
+
+[capabilities]
+events = ["agent.session-start", "agent.prompt", "agent.subagent", "agent.tool", "agent.permission-request", "agent.question", "agent.stop", "agent.unknown"]
+notify_hold = true
+sidebar_top = true
+timer = true
+
+[contributes]
+commands = [{ id = "start", title = "Start a focus block" }, { id = "end", title = "End focus block" }]
+
+[settings]
+minutes = { type = "integer", default = 25, description = "Length of a block, 1 to 240 minutes" }
+extend_minutes = { type = "integer", default = 5, description = "What \"more min\" adds when a block ends, 1 to 60" }
+unverified = { type = "bool", default = false, description = "Also follow events without the tab's nonce, which anything in the terminal can forge" }
