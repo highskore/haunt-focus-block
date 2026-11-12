@@ -1,6 +1,17 @@
+<div align="center">
+
+<img src="docs/icon.png" width="96" alt="">
+
 # Focus block
 
-A focus timer that holds agent pings until the block ends.
+**A focus timer that holds agent pings until the block ends.**
+
+[![Haunt plugin](https://img.shields.io/badge/Haunt-plugin-D97757)](https://github.com/highskore/haunt-hackathon)
+![Plugin API 0.5](https://img.shields.io/badge/plugin%20API-0.5-111)
+![WASM component](https://img.shields.io/badge/WASM-component-654ff0?logo=webassembly&logoColor=white)
+![MIT licence](https://img.shields.io/badge/licence-MIT-6b7280)
+
+</div>
 
 Run **Start a 25-minute focus block** from the ⌘K palette. Haunt holds its notifications and other plugins' for the block, and a row at the top of the sidebar counts down: `focus · 17:42 left`, with `3 held · prompts still break through` and a thin bar. Haunt never holds a permission prompt: its notification still shows and its row still goes to NEEDS YOU.
 
